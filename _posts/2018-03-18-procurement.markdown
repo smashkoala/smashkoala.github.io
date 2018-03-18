@@ -3,6 +3,7 @@ layout: single
 title:  "Procurement"
 date:   2018-03-18 00:58:44 +0100
 categories: Hardware
+author_profile: true
 ---
 
 I purchased the following parts and kits for my Donkey car.

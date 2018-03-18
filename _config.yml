@@ -50,6 +50,7 @@ analytics:
 
 author:
   name   : "Keita Yagi"
+  avatar : "/assets/images/bio-photo.jpg"
   bio    : "Software engineer dreaming to build self-driving cars"
 
 # Exclude from processing.

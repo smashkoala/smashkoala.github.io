@@ -3,6 +3,7 @@ layout: single
 title:  "Self-driving car Donkey!!"
 date:   2018-03-17 23:56:44 +0100
 categories: jekyll update
+author_profile: true
 ---
 Donkey is an open source self driving RC car.
 With a neural network model based on Keras running on Python, it drives by itself.
