@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: AI Self-Driving RC Car - Donkey 
+title: AI Self-Driving RC Car - Donkey
 name: "Keita Yagi"
 email: digital.dream.garage@gmail.com
 description: This is a blog about developing self-driving RC car "Donkey"
@@ -40,9 +40,17 @@ minimal_mistakes_skin: air
 #site search
 search: true
 
-head_scripts:
-  - https://code.jquery.com/jquery-3.2.1.min.js
-  - /assets/js/your-custom-head-script.js
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "UA-115961513-1"
+
+#head_scripts:
+#  - https://code.jquery.com/jquery-3.2.1.min.js
+
+author:
+  name   : "Keita Yagi"
+  bio    : "Software engineer dreaming to build self-driving cars"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
