@@ -1,0 +1,19 @@
+---
+layout: single
+title:  "Top plate mechanics design"
+date:   2018-03-21 20:58:44 +0100
+categories: Hardware
+author_profile: true
+---
+
+For the mechanics to be mounted on the RC car, I downloaded the original 3D design
+of the top plate and roll cage. They are in a Fusion360 file.
+I modified the file so that they fit to my Basher HellSeeker RC car.
+[![](https://img.youtube.com/vi/NDVN_pXmMjU/0.jpg)](https://www.youtube.com/watch?v=NDVN_pXmMjU)
+
+The following is the modified 3D design image.
+![TopPlateImage](/assets/images/TopPlate.png)
+
+I requested to 3D print this part and the roll cage through [3DHUB].
+
+[3DHUB]:https://www.3dhubs.com/

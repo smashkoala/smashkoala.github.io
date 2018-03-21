@@ -45,13 +45,13 @@ analytics:
   google:
     tracking_id: "UA-115961513-1"
 
-#head_scripts:
-#  - https://code.jquery.com/jquery-3.2.1.min.js
+head_scripts:
+  - https://code.jquery.com/jquery-3.2.1.min.js
 
 author:
   name   : "Keita Yagi"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Software engineer dreaming to build self-driving cars"
+  bio    : "Software engineer dreaming to build self-driving cars. Born in Japan. Currently working in Germany."
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
