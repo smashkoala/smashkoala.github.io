@@ -18,4 +18,5 @@ adapt the holes for the body mounting posts.
 on the default posts, the top plate could not become level.
 I purchased the longer body mounting posts designed for Basher Hell Seeker which is
 a brother of Bad Bug.
+
 ![hardware](/assets/images/hardware.jpg)
