@@ -1,13 +1,180 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-18T00:49:01+01:00</updated><id>http://localhost:4000/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2018/03/17/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-03-17T23:56:44+01:00</published><updated>2018-03-17T23:56:44+01:00</updated><id>http://localhost:4000/jekyll/update/2018/03/17/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/03/17/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-16T23:52:46+02:00</updated><id>http://localhost:4000/</id><title type="html">AI Self-Driving RC Car - Donkey</title><subtitle>This is a blog about developing self-driving RC car &quot;Donkey&quot;</subtitle><author><name>Keita Yagi</name></author><entry><title type="html">Calibrated and running with bluetooth joystick</title><link href="http://localhost:4000/hardware/2018/04/15/calibrated_running.html" rel="alternate" type="text/html" title="Calibrated and running with bluetooth joystick" /><published>2018-04-15T01:05:00+02:00</published><updated>2018-04-15T01:05:00+02:00</updated><id>http://localhost:4000/hardware/2018/04/15/calibrated_running</id><content type="html" xml:base="http://localhost:4000/hardware/2018/04/15/calibrated_running.html">&lt;p&gt;By following the instruction of the calibration, I have calibrated my Bad Bug
+Donkey car. THROTTLE_FORWARD_PWM = 390, THROTTLE_STOPPED_PWM = 370,
+THROTTLE_REVERSE_PWM = 350. These are the final throttle PWM values.&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;For steering, final steering PWM values are STEERING_LEFT_PWM = 430, STEERING_RIGHT_PWM = 295. The following table shows the diameter of the steering for each angle step when these PWM values are used.&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Step&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;-1.0&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;-0.9&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;-0.8&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;-0.7&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;-0.6&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;-0.5&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;0.5&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;0.6&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;0.7&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;0.8&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;0.9&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;1.0&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;diameter (cm)&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;141&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;145&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;161&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;185&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;224&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;280&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;248&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;216&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;192&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;167&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;151&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;136&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;After the calibration, I started running the car with Sony P3 Playstation joystick.
+The throttle can be well controlled by the joystick, since the joystick has much
+smaller granularity of the steering step than the web controller.
+The throttle control in low speed was not an issue, although initially I was concerned about it since my Bad Bug has a sensor-less brushless motor. It worked perfectly fine thanks
+to reduced number of battery packs, and the setting of forward PWM value = 390. The PWM value was set as small as possible. This is the PWM value when the car starts moving not when it is in the maximum throttle. In future, I can increase the speed of the car by increasing this PWM value.&lt;/p&gt;</content><author><name>Keita Yagi</name></author><summary type="html">By following the instruction of the calibration, I have calibrated my Bad Bug Donkey car. THROTTLE_FORWARD_PWM = 390, THROTTLE_STOPPED_PWM = 370, THROTTLE_REVERSE_PWM = 350. These are the final throttle PWM values.</summary></entry><entry><title type="html">Hardware assembly completed</title><link href="http://localhost:4000/hardware/2018/04/12/hardware_completed.html" rel="alternate" type="text/html" title="Hardware assembly completed" /><published>2018-04-12T01:05:00+02:00</published><updated>2018-04-12T01:05:00+02:00</updated><id>http://localhost:4000/hardware/2018/04/12/hardware_completed</id><content type="html" xml:base="http://localhost:4000/hardware/2018/04/12/hardware_completed.html">&lt;p&gt;Today, finally my Donkey car is fully assembled and ready to run. The mechanical
+parts are produced by 3D printer much better than I expected. The holes on the
+top plate to connect to the body mounting posts are well located.
+In order to assemble the hardware for Basher Bad Bug, I mainly made the following
+changes.
+1) The top plate was modified from the original one meant for Magnate mainly to
+adapt the holes for the body mounting posts.
+2) The length of the body mounts was too short. If the top plate was mounted
+on the default posts, the top plate could not become level.
+I purchased the longer body mounting posts designed for Basher Hell Seeker which is
+a brother of Bad Bug.
+&lt;img src=&quot;/assets/images/hardware.jpg&quot; alt=&quot;hardware&quot; /&gt;&lt;/p&gt;</content><author><name>Keita Yagi</name></author><summary type="html">Today, finally my Donkey car is fully assembled and ready to run. The mechanical parts are produced by 3D printer much better than I expected. The holes on the top plate to connect to the body mounting posts are well located. In order to assemble the hardware for Basher Bad Bug, I mainly made the following changes. 1) The top plate was modified from the original one meant for Magnate mainly to adapt the holes for the body mounting posts. 2) The length of the body mounts was too short. If the top plate was mounted on the default posts, the top plate could not become level. I purchased the longer body mounting posts designed for Basher Hell Seeker which is a brother of Bad Bug.</summary></entry><entry><title type="html">Brushed or brushless?</title><link href="http://localhost:4000/hardware/2018/04/04/BursedOrBrushless.html" rel="alternate" type="text/html" title="Brushed or brushless? " /><published>2018-04-04T21:58:44+02:00</published><updated>2018-04-04T21:58:44+02:00</updated><id>http://localhost:4000/hardware/2018/04/04/BursedOrBrushless</id><content type="html" xml:base="http://localhost:4000/hardware/2018/04/04/BursedOrBrushless.html">&lt;p&gt;My base car is Basher Bad Bug. This comes with sensor-less brushless motor. According to the Donkey car instruction page here, it seems that it is not easy to control the car when it is in low speed if it is a brushless motor.
+Now the question is 1) if it is true…? 2) if 1) is true, how I can replace the motor with the brushed motor.
+The size of the motor for the Bad bug is 38 mm for length, and 28 mm for diameter. This means that Mabuchi 380 motor &lt;img src=&quot;/assets/images/mabuchi380.png&quot; alt=&quot;Mabuchi380&quot; /&gt; can be a candidate of the replacement. However, the 380 has a 10mm diameter x 2.6mm motor shaft support bearing on the side of shaft that a gear is tied to.
+This portion may interfere with the current motor support case. The default motor needs to be taken our, and the size of the default motor needs to be thoroughly checked soon.&lt;/p&gt;</content><author><name>Keita Yagi</name></author><summary type="html">My base car is Basher Bad Bug. This comes with sensor-less brushless motor. According to the Donkey car instruction page here, it seems that it is not easy to control the car when it is in low speed if it is a brushless motor. Now the question is 1) if it is true…? 2) if 1) is true, how I can replace the motor with the brushed motor. The size of the motor for the Bad bug is 38 mm for length, and 28 mm for diameter. This means that Mabuchi 380 motor can be a candidate of the replacement. However, the 380 has a 10mm diameter x 2.6mm motor shaft support bearing on the side of shaft that a gear is tied to. This portion may interfere with the current motor support case. The default motor needs to be taken our, and the size of the default motor needs to be thoroughly checked soon.</summary></entry><entry><title type="html">Top plate mechanics design</title><link href="http://localhost:4000/hardware/2018/03/21/TopPlate3D.html" rel="alternate" type="text/html" title="Top plate mechanics design" /><published>2018-03-21T20:58:44+01:00</published><updated>2018-03-21T20:58:44+01:00</updated><id>http://localhost:4000/hardware/2018/03/21/TopPlate3D</id><content type="html" xml:base="http://localhost:4000/hardware/2018/03/21/TopPlate3D.html">&lt;p&gt;For the mechanics to be mounted on the RC car, I downloaded the original 3D design
+of the top plate and roll cage. They are in a Fusion360 file.
+I modified the file so that they fit to my Basher HellSeeker RC car.
+&lt;a href=&quot;https://www.youtube.com/watch?v=NDVN_pXmMjU&quot;&gt;&lt;img src=&quot;https://img.youtube.com/vi/NDVN_pXmMjU/0.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;p&gt;The following is the modified 3D design image.
+It required some redesign of the positions of the holes on the top plate for
+the body support poles from the original Magnet RC top plate.
+&lt;img src=&quot;/assets/images/TopPlate.png&quot; alt=&quot;TopPlateImage&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I requested to 3D print this part and the roll cage through &lt;a href=&quot;https://www.3dhubs.com/&quot;&gt;3DHUB&lt;/a&gt;.
+This will be shipped tomorrow. Hopefully, I can start assembling the hardware soon.&lt;/p&gt;</content><author><name>Keita Yagi</name></author><summary type="html">For the mechanics to be mounted on the RC car, I downloaded the original 3D design of the top plate and roll cage. They are in a Fusion360 file. I modified the file so that they fit to my Basher HellSeeker RC car.</summary></entry><entry><title type="html">Procurement summary</title><link href="http://localhost:4000/hardware/2018/03/18/procurement.html" rel="alternate" type="text/html" title="Procurement summary" /><published>2018-03-18T00:58:44+01:00</published><updated>2018-03-18T00:58:44+01:00</updated><id>http://localhost:4000/hardware/2018/03/18/procurement</id><content type="html" xml:base="http://localhost:4000/hardware/2018/03/18/procurement.html">&lt;p&gt;I purchased the following parts and kits for my Donkey car.
+The remaining parts that I need to purchase is the Donkey mount where a Raspberry PI board and other peripheral hardware can sit.
+Basher 1/16 Bad Bug is not officially supported car in the Donkey community.
+The biggest concern is that this car has a brushless motor. It may be difficult
+to control when it is in low speed. In the worst case, it should be replaced with
+a blush motor for a better control of speed.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Parts&lt;/th&gt;
+      &lt;th&gt;Supplier&lt;/th&gt;
+      &lt;th&gt;Quantity&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;BASHER 1/16 4WD MINI MONSTER TRUCK V2 - BAD BUG (ARR)&lt;/td&gt;
+      &lt;td&gt;HobbyKing.com&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ACCUCELL S60 AC CHARGER (EU PLUG)&lt;/td&gt;
+      &lt;td&gt;Hobbyking.com&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;TURNIGY 1700MAH 2S 20C LIPO PACK (SUITS 1/16TH MONSTER BEATLE, SCT &amp;amp; BUGGY)&lt;/td&gt;
+      &lt;td&gt;Hobbyking.com&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;PS3 - DualShock 3 Wireless Controller, Schwarz&lt;/td&gt;
+      &lt;td&gt;Amazon.de&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Raspberry Pi 3 Model B&lt;/td&gt;
+      &lt;td&gt;Amazon.de&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2x Neuftech 40x 20cm female female Jumper Wire Kabel Drahtbrücken für Breadboard Arduino Raspberry Pi&lt;/td&gt;
+      &lt;td&gt;Amazon.de&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Azdelivery PCA9685 16-Channel 12-bit PWM Servo Driver and other Microcontroller for Arduino Raspberry pi&lt;/td&gt;
+      &lt;td&gt;Amazon.de&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;SainSmart Wide Angle Fish-Eye Camera Lenses for Raspberry Pi Arduino&lt;/td&gt;
+      &lt;td&gt;Amazon.de&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Sandisk Ultra 64GB MicroSDXC Class 10 Memory Card and Adaptor up to 100MB/sec, U1, A1, FFP 64 gb&lt;/td&gt;
+      &lt;td&gt;Amazon.de&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;External Battery Power Bank Powerpack Charger 5200 mAh Portable Mobile Charger for iPhone x 8 8PLUS 7 6S 6, iPad, Samsung Galaxy and Other Cellphones&lt;/td&gt;
+      &lt;td&gt;Amazon.de&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;BODY MOUNTING POST (4PCS) - BASHER 1/16 MINI NITRO CIRCUS MT&lt;/td&gt;
+      &lt;td&gt;Hobbyking.com&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;SCREW SOCKET HEAD HEX M2 X 6MM MACHINE STEEL BLACK (10PCS)&lt;/td&gt;
+      &lt;td&gt;Hobbyking.com&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;SCREW COUNTERSUNK HEX M2.5 X 12MM MACHINE THREAD STEEL BLACK (10PCS)&lt;/td&gt;
+      &lt;td&gt;Hobbyking.com&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;M2.5 NUTS - NITRO CIRCUS BASHER 1/8 SCALE MONSTER TRUCK (10PCS)&lt;/td&gt;
+      &lt;td&gt;Hobbyking.com&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;WASHER SET (5X2.7X0.5)(10PCS/BAG) - 110BS, A2003T, A2027, A2028, A2029 AND A2035&lt;/td&gt;
+      &lt;td&gt;Hobbyking.com&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CABLE TIES 80MM X 3MM WHITE (100PCS)&lt;/td&gt;
+      &lt;td&gt;HobbyKing.com&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>Keita Yagi</name></author><summary type="html">I purchased the following parts and kits for my Donkey car. The remaining parts that I need to purchase is the Donkey mount where a Raspberry PI board and other peripheral hardware can sit. Basher 1/16 Bad Bug is not officially supported car in the Donkey community. The biggest concern is that this car has a brushless motor. It may be difficult to control when it is in low speed. In the worst case, it should be replaced with a blush motor for a better control of speed.</summary></entry><entry><title type="html">Self-driving car Donkey!!</title><link href="http://localhost:4000/jekyll/update/2018/03/17/firstPage.html" rel="alternate" type="text/html" title="Self-driving car Donkey!!" /><published>2018-03-17T23:56:44+01:00</published><updated>2018-03-17T23:56:44+01:00</updated><id>http://localhost:4000/jekyll/update/2018/03/17/firstPage</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/03/17/firstPage.html">&lt;p&gt;Donkey is an open source self driving RC car.
+With a neural network model based on Keras running on Python, it drives by itself.
+It uses Raspberry PI for processing trained neural network model.&lt;/p&gt;
+
+&lt;p&gt;For more information about what they can do and how to build, see &lt;a href=&quot;http://www.donkeycar.com/&quot;&gt;Donkey&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I will build a Donkey car, and expand the capability of the car by adding
+more sensors in future.&lt;/p&gt;
+
+&lt;p&gt;The 1st target now is to build the Donkey car hardware. For this, I need to
+re-design the existing 3D design of Donkey mount, and produce it by 3D printer.&lt;/p&gt;</content><author><name>Keita Yagi</name></author><summary type="html">Donkey is an open source self driving RC car. With a neural network model based on Keras running on Python, it drives by itself. It uses Raspberry PI for processing trained neural network model.</summary></entry></feed>

@@ -12,8 +12,11 @@ I modified the file so that they fit to my Basher HellSeeker RC car.
 [![](https://img.youtube.com/vi/NDVN_pXmMjU/0.jpg)](https://www.youtube.com/watch?v=NDVN_pXmMjU)
 
 The following is the modified 3D design image.
+It required some redesign of the positions of the holes on the top plate for
+the body support poles from the original Magnet RC top plate.
 ![TopPlateImage](/assets/images/TopPlate.png)
 
 I requested to 3D print this part and the roll cage through [3DHUB].
+This will be shipped tomorrow. Hopefully, I can start assembling the hardware soon.
 
 [3DHUB]:https://www.3dhubs.com/

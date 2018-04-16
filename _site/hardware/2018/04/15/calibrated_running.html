@@ -9,16 +9,19 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>AI Self-Driving RC Car - Donkey</title>
-<meta name="description" content="This is a blog about developing self-driving RC car “Donkey”">
+<!-- begin _includes/seo.html --><title>Calibrated and running with bluetooth joystick  AI Self-Driving RC Car - Donkey</title>
+<meta name="description" content="By following the instruction of the calibration, I have calibrated my Bad BugDonkey car. THROTTLE_FORWARD_PWM = 390, THROTTLE_STOPPED_PWM = 370,THROTTLE_REVERSE_PWM = 350. These are the final throttle PWM values.">
 
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="AI Self-Driving RC Car - Donkey">
-<meta property="og:title" content="AI Self-Driving RC Car - Donkey">
-<meta property="og:url" content="http://localhost:4000/">
+<meta property="og:title" content="Calibrated and running with bluetooth joystick">
+<meta property="og:url" content="http://localhost:4000/hardware/2018/04/15/calibrated_running.html">
+
+
+  <meta property="og:description" content="By following the instruction of the calibration, I have calibrated my Bad BugDonkey car. THROTTLE_FORWARD_PWM = 390, THROTTLE_STOPPED_PWM = 370,THROTTLE_REVERSE_PWM = 350. These are the final throttle PWM values.">
 
 
 
@@ -26,13 +29,14 @@
 
 
 
+  <meta property="article:published_time" content="2018-04-15T01:05:00+02:00">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/">
+<link rel="canonical" href="http://localhost:4000/hardware/2018/04/15/calibrated_running.html">
 
 
 
@@ -92,7 +96,7 @@
 
   </head>
 
-  <body class="layout--home">
+  <body class="layout--single">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -227,134 +231,105 @@
   </div>
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Calibrated and running with bluetooth joystick">
+    <meta itemprop="description" content="By following the instruction of the calibration, I have calibrated my Bad BugDonkey car. THROTTLE_FORWARD_PWM = 390, THROTTLE_STOPPED_PWM = 370,THROTTLE_REVERSE_PWM = 350. These are the final throttle PWM values.">
+    <meta itemprop="datePublished" content="April 15, 2018">
     
-      <h1 id="page-title" class="page__title"></h1>
-    
-    <h3 class="archive__subtitle">Recent Posts</h3>
 
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
+    <div class="page__inner-wrap">
       
-        <a href="/hardware/2018/04/15/calibrated_running.html" rel="permalink">Calibrated and running with bluetooth joystick
-</a>
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Calibrated and running with bluetooth joystick
+</h1>
+          
+        </header>
       
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">By following the instruction of the calibration, I have calibrated my Bad Bug
+
+      <section class="page__content" itemprop="text">
+        
+        <p>By following the instruction of the calibration, I have calibrated my Bad Bug
 Donkey car. THROTTLE_FORWARD_PWM = 390, THROTTLE_STOPPED_PWM = 370,
-THROTTLE_RE...</p>
+THROTTLE_REVERSE_PWM = 350. These are the final throttle PWM values.</p>
+
+<p>For steering, final steering PWM values are STEERING_LEFT_PWM = 430, STEERING_RIGHT_PWM = 295. The following table shows the diameter of the steering for each angle step when these PWM values are used.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Step</th>
+      <th style="text-align: center">-1.0</th>
+      <th style="text-align: center">-0.9</th>
+      <th style="text-align: center">-0.8</th>
+      <th style="text-align: center">-0.7</th>
+      <th style="text-align: center">-0.6</th>
+      <th style="text-align: center">-0.5</th>
+      <th style="text-align: center">0.5</th>
+      <th style="text-align: center">0.6</th>
+      <th style="text-align: center">0.7</th>
+      <th style="text-align: center">0.8</th>
+      <th style="text-align: center">0.9</th>
+      <th style="text-align: center">1.0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>diameter (cm)</td>
+      <td style="text-align: center">141</td>
+      <td style="text-align: center">145</td>
+      <td style="text-align: center">161</td>
+      <td style="text-align: center">185</td>
+      <td style="text-align: center">224</td>
+      <td style="text-align: center">280</td>
+      <td style="text-align: center">248</td>
+      <td style="text-align: center">216</td>
+      <td style="text-align: center">192</td>
+      <td style="text-align: center">167</td>
+      <td style="text-align: center">151</td>
+      <td style="text-align: center">136</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>After the calibration, I started running the car with Sony P3 Playstation joystick.
+The throttle can be well controlled by the joystick, since the joystick has much
+smaller granularity of the steering step than the web controller.
+The throttle control in low speed was not an issue, although initially I was concerned about it since my Bad Bug has a sensor-less brushless motor. It worked perfectly fine thanks
+to reduced number of battery packs, and the setting of forward PWM value = 390. The PWM value was set as small as possible. This is the PWM value when the car starts moving not when it is in the maximum throttle. In future, I can increase the speed of the car by increasing this PWM value.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-04-15T01:05:00+02:00">April 15, 2018</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/hardware/2018/04/12/hardware_completed.html" class="pagination--pager" title="Hardware assembly completed
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
   </article>
-</div>
 
   
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/hardware/2018/04/12/hardware_completed.html" rel="permalink">Hardware assembly completed
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">Today, finally my Donkey car is fully assembled and ready to run. The mechanical
-parts are produced by 3D printer much better than I expected. The holes on t...</p>
-  </article>
-</div>
-
   
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/hardware/2018/04/04/BursedOrBrushless.html" rel="permalink">Brushed or brushless?
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">My base car is Basher Bad Bug. This comes with sensor-less brushless motor. According to the Donkey car instruction page here, it seems that it is not easy t...</p>
-  </article>
-</div>
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/hardware/2018/03/21/TopPlate3D.html" rel="permalink">Top plate mechanics design
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">For the mechanics to be mounted on the RC car, I downloaded the original 3D design
-of the top plate and roll cage. They are in a Fusion360 file.
-I modified t...</p>
-  </article>
-</div>
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/hardware/2018/03/18/procurement.html" rel="permalink">Procurement summary
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">I purchased the following parts and kits for my Donkey car.
-The remaining parts that I need to purchase is the Donkey mount where a Raspberry PI board and ot...</p>
-  </article>
-</div>
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/jekyll/update/2018/03/17/firstPage.html" rel="permalink">Self-driving car Donkey!!
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">Donkey is an open source self driving RC car.
-With a neural network model based on Keras running on Python, it drives by itself.
-It uses Raspberry PI for pro...</p>
-  </article>
-</div>
-
-
-
-
-
-  </div>
 </div>
     </div>
 

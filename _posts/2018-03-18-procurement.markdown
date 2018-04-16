@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Procurement"
+title:  "Procurement summary"
 date:   2018-03-18 00:58:44 +0100
 categories: Hardware
 author_profile: true
@@ -8,6 +8,10 @@ author_profile: true
 
 I purchased the following parts and kits for my Donkey car.
 The remaining parts that I need to purchase is the Donkey mount where a Raspberry PI board and other peripheral hardware can sit.
+Basher 1/16 Bad Bug is not officially supported car in the Donkey community.
+The biggest concern is that this car has a brushless motor. It may be difficult
+to control when it is in low speed. In the worst case, it should be replaced with
+a blush motor for a better control of speed.
 
 |Parts  |Supplier  |Quantity  |
 |---|---|---|
