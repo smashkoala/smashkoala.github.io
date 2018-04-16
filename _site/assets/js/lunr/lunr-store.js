@@ -14,11 +14,6 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/hardware/2018/03/21/TopPlate3D.html",
         "teaser":null},{
-        "title": "Brushed or brushless? ",
-        "excerpt":"My base car is Basher Bad Bug. This comes with sensor-less brushless motor. According to the Donkey car instruction page here, it seems that it is not easy to control the car when it is in low speed if it is a brushless motor.Now the question is 1) if it...","categories": ["Hardware"],
-        "tags": [],
-        "url": "http://localhost:4000/hardware/2018/04/04/BursedOrBrushless.html",
-        "teaser":null},{
         "title": "Hardware assembly completed",
         "excerpt":"Today, finally my Donkey car is fully assembled and ready to run. The mechanicalparts are produced by 3D printer much better than I expected. The holes on thetop plate to connect to the body mounting posts are well located.In order to assemble the hardware for Basher Bad Bug, I mainly...","categories": ["Hardware"],
         "tags": [],
