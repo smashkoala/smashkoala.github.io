@@ -1,4 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-17T00:15:54+02:00</updated><id>http://localhost:4000/</id><title type="html">AI Self-Driving RC Car - Donkey</title><subtitle>This is a blog about developing self-driving RC car &quot;Donkey&quot;</subtitle><author><name>Keita Yagi</name></author><entry><title type="html">Calibrated and running with bluetooth joystick</title><link href="http://localhost:4000/hardware/2018/04/15/calibrated_running.html" rel="alternate" type="text/html" title="Calibrated and running with bluetooth joystick" /><published>2018-04-15T01:05:00+02:00</published><updated>2018-04-15T01:05:00+02:00</updated><id>http://localhost:4000/hardware/2018/04/15/calibrated_running</id><content type="html" xml:base="http://localhost:4000/hardware/2018/04/15/calibrated_running.html">&lt;p&gt;By following the instruction of the calibration, I have calibrated my Bad Bug
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-12T23:42:18+02:00</updated><id>http://localhost:4000/</id><title type="html">AI Self-Driving RC Car - Donkey</title><subtitle>This is a blog about developing self-driving RC car &quot;Donkey&quot;</subtitle><author><name>Keita Yagi</name></author><entry><title type="html">CNN model of Donkey</title><link href="http://localhost:4000/software/2018/06/11/CNNModel.html" rel="alternate" type="text/html" title="CNN model of Donkey" /><published>2018-06-11T01:05:00+02:00</published><updated>2018-06-11T01:05:00+02:00</updated><id>http://localhost:4000/software/2018/06/11/CNNModel</id><content type="html" xml:base="http://localhost:4000/software/2018/06/11/CNNModel.html">&lt;p&gt;Donkey uses Convolutional Neural Network(CNN) to control the car.
+The input of CNN is the image from the camera on Donkey car. The steering angle and throttle are the outputs of the CNN.
+The CNN architecture is as below.
+&lt;img src=&quot;/assets/images/CNN_model.png&quot; alt=&quot;model&quot; /&gt;
+&lt;img src=&quot;/assets/images/model.png&quot; alt=&quot;model_diagram&quot; /&gt;
+The input is 120x160 image with RGB channels.
+It has five Convolution layers. The activation function is RELU.
+Three of them use 5x5 kernel and 2 strides, one of them uses 3x3 kernel and
+2 strides and one of them uses 3x3 kernel and 1 strides.
+A fully connected layer follows to make it flat. This makes 100 flattened outputs. Following this layer, a dropout layer is implemented to cut 10% of neurons in order to avoid overfitting.
+Another fully connected layer makes it 50 outputs. Again, here we have a dropout layer with 10% of dropout.
+Finally for steering angle output, a fully connected layer makes the probabilities of 15 (15 categories) by using Softmax activation. This output is converted to a linear value using this formula.&lt;br /&gt;
+    a = b * (2/14) - 1&lt;br /&gt;
+a is the final steering output to the Donkey.&lt;br /&gt;
+b is the index of the array which has the max probability.&lt;br /&gt;
+0 &amp;lt;= b &amp;lt; 15. b represents the category which has the highest probability within 15 categories.&lt;/p&gt;
+
+&lt;p&gt;For example,&lt;br /&gt;
+if “b” is 7,  “a” becomes 0.0.&lt;br /&gt;
+If “b” is 0,  “a” becomes -1.0.&lt;br /&gt;
+If “b” is 14, “a” becomes 1.0.&lt;br /&gt;
+If “b” is 3,  “a” becomes -0.5714285714285714&lt;br /&gt;
+if “b” is 10, “a” becomes 0.4285714285714284  &lt;br /&gt;
+This way, the angle value becomes within the range from -1.0 to 1.0.&lt;/p&gt;
+
+&lt;p&gt;The throttle value is made from a fully connected layer which makes linear output by using RELU activation function.&lt;/p&gt;
+
+&lt;p&gt;This Stanford University web page explains pretty well how Convolution neural network works. &lt;a href=&quot;http://cs231n.github.io/convolutional-networks/&quot;&gt;Stanford University CS231 n Convolutional Neural Networks (CNNs / ConvNets)&lt;/a&gt;&lt;/p&gt;</content><author><name>Keita Yagi</name></author><summary type="html">Donkey uses Convolutional Neural Network(CNN) to control the car. The input of CNN is the image from the camera on Donkey car. The steering angle and throttle are the outputs of the CNN. The CNN architecture is as below. The input is 120x160 image with RGB channels. It has five Convolution layers. The activation function is RELU. Three of them use 5x5 kernel and 2 strides, one of them uses 3x3 kernel and 2 strides and one of them uses 3x3 kernel and 1 strides. A fully connected layer follows to make it flat. This makes 100 flattened outputs. Following this layer, a dropout layer is implemented to cut 10% of neurons in order to avoid overfitting. Another fully connected layer makes it 50 outputs. Again, here we have a dropout layer with 10% of dropout. Finally for steering angle output, a fully connected layer makes the probabilities of 15 (15 categories) by using Softmax activation. This output is converted to a linear value using this formula. a = b * (2/14) - 1 a is the final steering output to the Donkey. b is the index of the array which has the max probability. 0 &amp;lt;= b &amp;lt; 15. b represents the category which has the highest probability within 15 categories.</summary></entry><entry><title type="html">Calibrated and running with bluetooth joystick</title><link href="http://localhost:4000/hardware/2018/04/15/calibrated_running.html" rel="alternate" type="text/html" title="Calibrated and running with bluetooth joystick" /><published>2018-04-15T01:05:00+02:00</published><updated>2018-04-15T01:05:00+02:00</updated><id>http://localhost:4000/hardware/2018/04/15/calibrated_running</id><content type="html" xml:base="http://localhost:4000/hardware/2018/04/15/calibrated_running.html">&lt;p&gt;By following the instruction of the calibration, I have calibrated my Bad Bug
 Donkey car. THROTTLE_FORWARD_PWM = 390, THROTTLE_STOPPED_PWM = 370,
 THROTTLE_REVERSE_PWM = 350. These are the final throttle PWM values.&lt;/p&gt;
 

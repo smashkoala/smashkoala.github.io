@@ -23,4 +23,9 @@ var store = [{
         "excerpt":"By following the instruction of the calibration, I have calibrated my Bad BugDonkey car. THROTTLE_FORWARD_PWM = 390, THROTTLE_STOPPED_PWM = 370,THROTTLE_REVERSE_PWM = 350. These are the final throttle PWM values. For steering, final steering PWM values are STEERING_LEFT_PWM = 430, STEERING_RIGHT_PWM = 295. The following table shows the diameter of the...","categories": ["Hardware"],
         "tags": [],
         "url": "http://localhost:4000/hardware/2018/04/15/calibrated_running.html",
+        "teaser":null},{
+        "title": "CNN model of Donkey",
+        "excerpt":"Donkey uses Convolutional Neural Network(CNN) to control the car.The input of CNN is the image from the camera on Donkey car. The steering angle and throttle are the outputs of the CNN.The CNN architecture is as below.The input is 120x160 image with RGB channels.It has five Convolution layers. The activation...","categories": ["Software"],
+        "tags": [],
+        "url": "http://localhost:4000/software/2018/06/11/CNNModel.html",
         "teaser":null}]
