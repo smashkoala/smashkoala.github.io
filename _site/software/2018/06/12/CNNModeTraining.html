@@ -9,16 +9,19 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>AI Self-Driving RC Car - Donkey</title>
-<meta name="description" content="This is a blog about developing self-driving RC car “Donkey”">
+<!-- begin _includes/seo.html --><title>CNN model training - AI Self-Driving RC Car - Donkey</title>
+<meta name="description" content="Training Donkey uses Convolutional Neural Network(CNN) to control the car.The following graph shows how the model is trained.">
 
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="AI Self-Driving RC Car - Donkey">
-<meta property="og:title" content="AI Self-Driving RC Car - Donkey">
-<meta property="og:url" content="http://localhost:4000/">
+<meta property="og:title" content="CNN model training">
+<meta property="og:url" content="http://localhost:4000/software/2018/06/12/CNNModeTraining.html">
+
+
+  <meta property="og:description" content="Training Donkey uses Convolutional Neural Network(CNN) to control the car.The following graph shows how the model is trained.">
 
 
 
@@ -26,13 +29,14 @@
 
 
 
+  <meta property="article:published_time" content="2018-06-12T01:05:00+02:00">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/">
+<link rel="canonical" href="http://localhost:4000/software/2018/06/12/CNNModeTraining.html">
 
 
 
@@ -92,7 +96,7 @@
 
   </head>
 
-  <body class="layout--home">
+  <body class="layout--single">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -227,159 +231,86 @@
   </div>
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="CNN model training">
+    <meta itemprop="description" content="Training Donkey uses Convolutional Neural Network(CNN) to control the car.The following graph shows how the model is trained.">
+    <meta itemprop="datePublished" content="June 12, 2018">
     
-      <h1 id="page-title" class="page__title"></h1>
-    
-    <h3 class="archive__subtitle">Recent Posts</h3>
 
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
+    <div class="page__inner-wrap">
       
-        <a href="/software/2018/06/12/CNNModeTraining.html" rel="permalink">CNN model training
-</a>
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">CNN model training
+</h1>
+          
+        </header>
       
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">
 
-Training 
+      <section class="page__content" itemprop="text">
+        
+        <hr />
+<p>Training <br />
 Donkey uses Convolutional Neural Network(CNN) to control the car.
-The following graph shows how the model is trained.
+The following graph shows how the model is trained.</p>
 
-</p>
+<p><img src="/assets/images/model_loss.png" alt="model_loss" /></p>
+
+<p>The number of epochs means how many times the same set of the data is used for training.
+The loss means how prediction is different from actual data. Obviously after 10 epochs, it is overfitting.</p>
+
+<hr />
+
+<p>Visualization  <br />
+These video clips tell what objects in image activates the neural network in order to decide the steering angle.  It is called saliency mapping.</p>
+
+<p>This is raw video from a Donkey car.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sI8ZMx6i4os" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<p>This is saliency map video made from the video clip above.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/X62V13HihFU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<p>This video tells how the CNN sees the world.
+The pixels which are in red are the parts that affect most to decide the steering angle output.
+These pixels activate the neurons most in the convolutional neural network.
+As we can see from this video, the guiding line on the floor is actually not always the one
+that activates the network. This means that the Donkey decides the steering angle not by
+guiding lane, but other objects and circumstances.
+This is not really what is expected from the training, and re-training is required
+in order for Donkey to decide the angle mostly from the guiding line.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-06-12T01:05:00+02:00">June 12, 2018</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/software/2018/06/11/CNNModel.html" class="pagination--pager" title="CNN model of Donkey
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
   </article>
-</div>
 
   
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/software/2018/06/11/CNNModel.html" rel="permalink">CNN model of Donkey
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">Donkey uses Convolutional Neural Network(CNN) to control the car.
-The input of CNN is the image from the camera on Donkey car. The steering angle and throttl...</p>
-  </article>
-</div>
-
   
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/hardware/2018/04/15/calibrated_running.html" rel="permalink">Calibrated and running with bluetooth joystick
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">By following the instruction of the calibration, I have calibrated my Bad Bug
-Donkey car. THROTTLE_FORWARD_PWM = 390, THROTTLE_STOPPED_PWM = 370,
-THROTTLE_RE...</p>
-  </article>
-</div>
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/hardware/2018/04/12/hardware_completed.html" rel="permalink">Hardware assembly completed
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">Today, finally my Donkey car is fully assembled and ready to run. The mechanical
-parts are produced by 3D printer much better than I expected. The holes on t...</p>
-  </article>
-</div>
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/hardware/2018/03/21/TopPlate3D.html" rel="permalink">Top plate mechanics design
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">For the mechanics to be mounted on the RC car, I downloaded the original 3D design
-of the top plate and roll cage. They are in a Fusion360 file.
-I modified t...</p>
-  </article>
-</div>
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/hardware/2018/03/18/procurement.html" rel="permalink">Procurement summary
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">I purchased the following parts and kits for my Donkey car.
-The remaining parts that I need to purchase is the Donkey mount where a Raspberry PI board and ot...</p>
-  </article>
-</div>
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/jekyll/update/2018/03/17/firstPage.html" rel="permalink">Self-driving car Donkey!!
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">Donkey is an open source self driving RC car.
-With a neural network model based on Keras running on Python, it drives by itself.
-It uses Raspberry PI for pro...</p>
-  </article>
-</div>
-
-
-
-
-
-  </div>
 </div>
     </div>
 

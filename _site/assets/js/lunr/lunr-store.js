@@ -28,4 +28,9 @@ var store = [{
         "excerpt":"Donkey uses Convolutional Neural Network(CNN) to control the car.The input of CNN is the image from the camera on Donkey car. The steering angle and throttle are the outputs of the CNN.The CNN architecture is as below.The input is 120x160 image with RGB channels.It has five Convolution layers. The activation...","categories": ["Software"],
         "tags": [],
         "url": "http://localhost:4000/software/2018/06/11/CNNModel.html",
+        "teaser":null},{
+        "title": "CNN model training",
+        "excerpt":"Training Donkey uses Convolutional Neural Network(CNN) to control the car.The following graph shows how the model is trained. The number of epochs means how many times the same set of the data is used for training.The loss means how prediction is different from actual data. Obviously after 10 epochs, it...","categories": ["Software"],
+        "tags": [],
+        "url": "http://localhost:4000/software/2018/06/12/CNNModeTraining.html",
         "teaser":null}]

@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-12T23:42:18+02:00</updated><id>http://localhost:4000/</id><title type="html">AI Self-Driving RC Car - Donkey</title><subtitle>This is a blog about developing self-driving RC car &quot;Donkey&quot;</subtitle><author><name>Keita Yagi</name></author><entry><title type="html">CNN model of Donkey</title><link href="http://localhost:4000/software/2018/06/11/CNNModel.html" rel="alternate" type="text/html" title="CNN model of Donkey" /><published>2018-06-11T01:05:00+02:00</published><updated>2018-06-11T01:05:00+02:00</updated><id>http://localhost:4000/software/2018/06/11/CNNModel</id><content type="html" xml:base="http://localhost:4000/software/2018/06/11/CNNModel.html">&lt;p&gt;Donkey uses Convolutional Neural Network(CNN) to control the car.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-26T22:23:00+02:00</updated><id>http://localhost:4000/</id><title type="html">AI Self-Driving RC Car - Donkey</title><subtitle>This is a blog about developing self-driving RC car &quot;Donkey&quot;</subtitle><author><name>Keita Yagi</name></author><entry><title type="html">CNN model training</title><link href="http://localhost:4000/software/2018/06/12/CNNModeTraining.html" rel="alternate" type="text/html" title="CNN model training" /><published>2018-06-12T01:05:00+02:00</published><updated>2018-06-12T01:05:00+02:00</updated><id>http://localhost:4000/software/2018/06/12/CNNModeTraining</id><content type="html" xml:base="http://localhost:4000/software/2018/06/12/CNNModeTraining.html">&lt;hr /&gt;
+&lt;p&gt;Training &lt;br /&gt;
+Donkey uses Convolutional Neural Network(CNN) to control the car.
+The following graph shows how the model is trained.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/model_loss.png&quot; alt=&quot;model_loss&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The number of epochs means how many times the same set of the data is used for training.
+The loss means how prediction is different from actual data. Obviously after 10 epochs, it is overfitting.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Visualization  &lt;br /&gt;
+These video clips tell what objects in image activates the neural network in order to decide the steering angle.  It is called saliency mapping.&lt;/p&gt;
+
+&lt;p&gt;This is raw video from a Donkey car.&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/sI8ZMx6i4os&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;This is saliency map video made from the video clip above.&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/X62V13HihFU&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;This video tells how the CNN sees the world.
+The pixels which are in red are the parts that affect most to decide the steering angle output.
+These pixels activate the neurons most in the convolutional neural network.
+As we can see from this video, the guiding line on the floor is actually not always the one
+that activates the network. This means that the Donkey decides the steering angle not by
+guiding lane, but other objects and circumstances.
+This is not really what is expected from the training, and re-training is required
+in order for Donkey to decide the angle mostly from the guiding line.&lt;/p&gt;</content><author><name>Keita Yagi</name></author><summary type="html">Training Donkey uses Convolutional Neural Network(CNN) to control the car. The following graph shows how the model is trained.</summary></entry><entry><title type="html">CNN model of Donkey</title><link href="http://localhost:4000/software/2018/06/11/CNNModel.html" rel="alternate" type="text/html" title="CNN model of Donkey" /><published>2018-06-11T01:05:00+02:00</published><updated>2018-06-11T01:05:00+02:00</updated><id>http://localhost:4000/software/2018/06/11/CNNModel</id><content type="html" xml:base="http://localhost:4000/software/2018/06/11/CNNModel.html">&lt;p&gt;Donkey uses Convolutional Neural Network(CNN) to control the car.
 The input of CNN is the image from the camera on Donkey car. The steering angle and throttle are the outputs of the CNN.
 The CNN architecture is as below.
 &lt;img src=&quot;/assets/images/CNN_model.png&quot; alt=&quot;model&quot; /&gt;
